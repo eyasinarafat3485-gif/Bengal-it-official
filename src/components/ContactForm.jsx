@@ -20,26 +20,40 @@ export default function ContactForm() {
     setStatus({ submitting: true, success: null, message: '' });
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "d9e75cb9-cae9-429b-bb80-aaf80932fa96",
+          name: formData.name,
+          email: formData.email,
+          replyto: formData.email,
+          subject: `New Project Scope Inquiry from ${formData.name}`,
+          message: formData.message,
+          from_name: `${formData.name} (Bengal-IT Client)`,
+        }),
       });
 
       const result = await res.json();
       if (res.ok && result.success) {
-        setStatus({ submitting: false, success: true, message: result.message });
+        setStatus({
+          submitting: false,
+          success: true,
+          message: 'Thank you! Your project scope has been transmitted successfully to info@bengalit.com.bd'
+        });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error(result.message || 'Failed transmitting scope.');
+        throw new Error(result.message || 'Failed transmitting message.');
       }
     } catch (err) {
       setStatus({
         submitting: false,
-        success: true,
-        message: 'Thank you! Your project scope has been transmitted successfully to Bengal-IT.'
+        success: false,
+        message: err.message || 'Error transmitting message. Please try again.'
       });
-      setFormData({ name: '', email: '', message: '' });
     }
   };
 
