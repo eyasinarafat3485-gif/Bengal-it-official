@@ -38,24 +38,23 @@ export default function ContactForm() {
       });
 
       const result = await res.json();
-      console.log('Web3Forms Live Submission Response:', result);
 
       if (res.ok && result.success) {
         setStatus({
           submitting: false,
           success: true,
-          message: 'Thank you! Your project scope has been transmitted successfully to info@bengalit.com.bd'
+          message: 'Thank you! Your project scope has been transmitted successfully to Bengal-IT.'
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error(result.message || 'Domain not whitelisted or submission failed.');
+        throw new Error(result.message || 'Submission failed.');
       }
     } catch (err) {
       console.error('Contact submit error:', err);
       setStatus({
         submitting: false,
         success: false,
-        message: err.message || 'Error transmitting message. Please check Web3Forms domain settings.'
+        message: err.message || 'Error transmitting message. Please try again.'
       });
     }
   };

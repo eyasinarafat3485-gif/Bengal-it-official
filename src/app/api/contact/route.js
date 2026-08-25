@@ -28,7 +28,7 @@ export async function POST(req) {
     if (result.success) {
       return NextResponse.json({
         success: true,
-        message: "Thank you! Your project scope has been transmitted successfully to info@bengalit.com.bd",
+        message: "Thank you! Your project scope has been transmitted successfully to Bengal-IT.",
       });
     } else {
       return NextResponse.json(
