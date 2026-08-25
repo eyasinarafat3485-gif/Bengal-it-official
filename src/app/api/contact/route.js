@@ -16,9 +16,10 @@ export async function POST(req) {
         access_key: accessKey,
         name: name,
         email: email,
+        replyto: email,
         subject: `New Project Scope Inquiry from ${name}`,
         message: message,
-        from_name: "Bengal-IT Website Inquiry Engine",
+        from_name: `${name} (Bengal-IT Client)`,
       }),
     });
 
