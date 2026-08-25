@@ -2,24 +2,17 @@
   "name": "bengal-it-official",
   "version": "1.0.0",
   "private": true,
-  "description": "Bengal-IT Official Website & API built with Next.js, Express, Node.js, and MongoDB",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
-    "build": "npm --prefix client run build",
-    "build:client": "npm --prefix client run build",
-    "start": "npm --prefix client start",
-    "start:server": "npm --prefix server start",
-    "start:client": "npm --prefix client start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^13.1.1",
+    "lucide-react": "^0.380.0",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
   }
 }
