@@ -7,8 +7,6 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    budget: '$100 - $500',
-    serviceType: 'Select Your Project Type',
     message: ''
   });
   const [status, setStatus] = useState({ submitting: false, success: null, message: '' });
@@ -28,7 +26,7 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          subject: `${formData.serviceType} (${formData.budget})`,
+          subject: 'Direct Project Inquiry',
           message: formData.message
         }),
       }).catch(() => null);
@@ -36,11 +34,11 @@ export default function ContactForm() {
       if (res && res.ok) {
         const result = await res.json();
         setStatus({ submitting: false, success: true, message: result.message || 'Scope transmitted successfully!' });
-        setFormData({ name: '', email: '', budget: '$100 - $500', serviceType: 'Select Your Project Type', message: '' });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setTimeout(() => {
           setStatus({ submitting: false, success: true, message: 'Thank you! Your project scope has been transmitted successfully to Bengal-IT.' });
-          setFormData({ name: '', email: '', budget: '$100 - $500', serviceType: 'Select Your Project Type', message: '' });
+          setFormData({ name: '', email: '', message: '' });
         }, 600);
       }
     } catch (err) {
@@ -161,42 +159,6 @@ export default function ContactForm() {
                     placeholder="john124@gmail.com"
                     className="inquiry-input"
                   />
-                </div>
-              </div>
-
-              <div className="form-row-2">
-                <div className="form-field">
-                  <label className="form-label">Estimated Budget Range</label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="inquiry-select"
-                  >
-                    <option value="$100 - $500">$100 - $500</option>
-                    <option value="$500 - $1,000">$500 - $1,000</option>
-                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    <option value="$5,000+">$5,000+</option>
-                  </select>
-                </div>
-
-                <div className="form-field">
-                  <label className="form-label">Required Service *</label>
-                  <select
-                    name="serviceType"
-                    value={formData.serviceType}
-                    onChange={handleChange}
-                    required
-                    className="inquiry-select"
-                  >
-                    <option value="Select Your Project Type">Select Your Project Type</option>
-                    <option value="Business Website Development">Business Website Development</option>
-                    <option value="eCommerce Website Development">eCommerce Website Development</option>
-                    <option value="Landing Page Development">Landing Page Development</option>
-                    <option value="Website Redesign">Website Redesign</option>
-                    <option value="Website Maintenance">Website Maintenance</option>
-                    <option value="Custom Enterprise Solution">Custom Enterprise Solution</option>
-                  </select>
                 </div>
               </div>
 
