@@ -38,6 +38,8 @@ export default function ContactForm() {
       });
 
       const result = await res.json();
+      console.log('Web3Forms Live Submission Response:', result);
+
       if (res.ok && result.success) {
         setStatus({
           submitting: false,
@@ -46,13 +48,14 @@ export default function ContactForm() {
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error(result.message || 'Failed transmitting message.');
+        throw new Error(result.message || 'Domain not whitelisted or submission failed.');
       }
     } catch (err) {
+      console.error('Contact submit error:', err);
       setStatus({
         submitting: false,
         success: false,
-        message: err.message || 'Error transmitting message. Please try again.'
+        message: err.message || 'Error transmitting message. Please check Web3Forms domain settings.'
       });
     }
   };
