@@ -90,7 +90,14 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item">
               <MapPin size={16} style={{ color: '#2563eb', flexShrink: 0 }} />
-              <span>Dhaka, Bangladesh</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Mirpur+11,+Dhaka-1213,+Bangladesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-contact-link"
+              >
+                Mirpur 11, Dhaka-1213, Bangladesh
+              </a>
             </div>
           </div>
         </div>

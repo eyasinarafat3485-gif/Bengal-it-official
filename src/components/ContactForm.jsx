@@ -46,6 +46,8 @@ export default function ContactForm() {
     }
   };
 
+  const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Mirpur+11,+Dhaka-1213,+Bangladesh";
+
   return (
     <section id="contact" className="inquiry-section">
       <div className="container">
@@ -71,14 +73,25 @@ export default function ContactForm() {
 
             <ul className="hubs-list">
               <li className="hub-item">
-                <div className="hub-icon-wrap">
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hub-icon-wrap"
+                  title="View on Google Maps"
+                >
                   <MapPin size={20} />
-                </div>
+                </a>
                 <div>
                   <h4 className="hub-item-title">Headquarters</h4>
-                  <p className="hub-item-detail">
-                    Level 8, Tower B, Corporate Heights, Mirpur 11, Dhaka-1213, Bangladesh
-                  </p>
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hub-item-detail map-location-link"
+                  >
+                    Mirpur 11, Dhaka-1213, Bangladesh
+                  </a>
                 </div>
               </li>
 
@@ -88,7 +101,9 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="hub-item-title">General Inquiries</h4>
-                  <p className="hub-item-detail">eyasinwebdev@gmail.com</p>
+                  <a href="mailto:eyasinwebdev@gmail.com" className="hub-item-detail map-location-link">
+                    eyasinwebdev@gmail.com
+                  </a>
                 </div>
               </li>
 
@@ -98,7 +113,9 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="hub-item-title">Consultation Hotline</h4>
-                  <p className="hub-item-detail">+880 1793-679254</p>
+                  <a href="tel:+8801793679254" className="hub-item-detail map-location-link">
+                    +880 1793-679254
+                  </a>
                 </div>
               </li>
             </ul>
