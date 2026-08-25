@@ -96,25 +96,25 @@ export default function ContactForm() {
               </li>
 
               <li className="hub-item">
-                <div className="hub-icon-wrap">
+                <a href="mailto:info@bengalit.com.bd" className="hub-icon-wrap" title="Send Email">
                   <Mail size={20} />
-                </div>
+                </a>
                 <div>
                   <h4 className="hub-item-title">General Inquiries</h4>
-                  <a href="mailto:eyasinwebdev@gmail.com" className="hub-item-detail map-location-link">
-                    eyasinwebdev@gmail.com
+                  <a href="mailto:info@bengalit.com.bd" className="hub-item-detail map-location-link">
+                    info@bengalit.com.bd
                   </a>
                 </div>
               </li>
 
               <li className="hub-item">
-                <div className="hub-icon-wrap">
+                <a href="tel:01904028006" className="hub-icon-wrap" title="Call Hotline">
                   <Phone size={20} />
-                </div>
+                </a>
                 <div>
                   <h4 className="hub-item-title">Consultation Hotline</h4>
-                  <a href="tel:+8801793679254" className="hub-item-detail map-location-link">
-                    +880 1793-679254
+                  <a href="tel:01904028006" className="hub-item-detail map-location-link">
+                    01904-028006
                   </a>
                 </div>
               </li>

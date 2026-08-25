@@ -2344,12 +2344,13 @@ body {
 
 .map-location-link {
   color: var(--text-muted);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: color 0.2s ease;
   display: inline-block;
 }
 
 .map-location-link:hover {
   color: var(--primary-blue);
-  text-decoration: underline;
+  text-decoration: none !important;
+}
 }
