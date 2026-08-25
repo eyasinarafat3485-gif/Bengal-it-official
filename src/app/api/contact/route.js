@@ -4,7 +4,7 @@ export async function POST(req) {
   try {
     const { name, email, message } = await req.json();
 
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "a0b1c2d3-e4f5-6789-0123-456789abcdef";
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "d9e75cb9-cae9-429b-bb80-aaf80932fa96";
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -30,15 +30,15 @@ export async function POST(req) {
         message: "Thank you! Your project scope has been transmitted successfully to info@bengalit.com.bd",
       });
     } else {
-      return NextResponse.json({
-        success: true,
-        message: "Thank you! Your project scope has been transmitted successfully to Bengal-IT.",
-      });
+      return NextResponse.json(
+        { success: false, message: result.message || "Failed to transmit message." },
+        { status: 400 }
+      );
     }
   } catch (error) {
-    return NextResponse.json({
-      success: true,
-      message: "Thank you! Your project scope has been transmitted successfully to Bengal-IT.",
-    });
+    return NextResponse.json(
+      { success: false, message: error.message || "Server error occurred." },
+      { status: 500 }
+    );
   }
 }
