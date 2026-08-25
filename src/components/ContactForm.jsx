@@ -73,12 +73,11 @@ export default function ContactForm() {
 
             <ul className="hubs-list">
               <li className="hub-item">
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
+                  onClick={() => window.open(mapsUrl, '_blank', 'noopener,noreferrer')}
                   className="hub-item-card"
-                  title="Open in Google Maps"
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="hub-icon-wrap">
                     <MapPin size={20} />
@@ -89,14 +88,15 @@ export default function ContactForm() {
                       Mirpur 11, Dhaka-1213, Bangladesh
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
 
               <li className="hub-item">
-                <a
-                  href="mailto:info@bengalit.com.bd"
+                <div
+                  onClick={() => window.location.href = 'mailto:info@bengalit.com.bd'}
                   className="hub-item-card"
-                  title="Send Email Inquiry"
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="hub-icon-wrap">
                     <Mail size={20} />
@@ -107,14 +107,15 @@ export default function ContactForm() {
                       info@bengalit.com.bd
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
 
               <li className="hub-item">
-                <a
-                  href="tel:01904028006"
+                <div
+                  onClick={() => window.location.href = 'tel:01904028006'}
                   className="hub-item-card"
-                  title="Call Consultation Hotline"
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="hub-icon-wrap">
                     <Phone size={20} />
@@ -125,7 +126,7 @@ export default function ContactForm() {
                       01904-028006
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
