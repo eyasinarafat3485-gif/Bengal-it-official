@@ -1910,3 +1910,175 @@ body {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
+
+/* ==========================================
+   ABOUT US PAGE STYLES & RESPONSIVENESS
+   ========================================== */
+.about-hero {
+  padding: 5rem 0 4rem;
+  background: radial-gradient(circle at 85% 35%, rgba(37, 99, 235, 0.08) 0%, transparent 60%), var(--bg-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-h1 {
+  font-size: clamp(2.1rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.highlight-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.about-principles-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+.principles-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+}
+
+.principles-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.principle-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.principle-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.principle-icon-wrap.cyan {
+  background: rgba(0, 210, 255, 0.12);
+  color: #0088cc;
+}
+
+.principle-icon-wrap.gold {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.principle-icon-wrap.blue {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.principle-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.principle-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+/* About Us Page Responsive Overrides */
+@media (max-width: 991px) {
+  .about-hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .about-content-left {
+    text-align: center;
+  }
+
+  .about-desc {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-cta-group {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 2.25rem 0 2.75rem;
+  }
+
+  .about-h1 {
+    font-size: clamp(1.55rem, 6vw, 1.95rem);
+    line-height: 1.25;
+  }
+
+  .about-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .about-principles-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .principle-item {
+    gap: 0.75rem;
+  }
+
+  .principle-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .principle-name {
+    font-size: 0.9rem;
+  }
+
+  .principle-desc {
+    font-size: 0.8rem;
+  }
+}
