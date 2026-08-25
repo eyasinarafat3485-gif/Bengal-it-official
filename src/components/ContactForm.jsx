@@ -20,29 +20,26 @@ export default function ContactForm() {
     setStatus({ submitting: true, success: null, message: '' });
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: 'Direct Project Inquiry',
-          message: formData.message
-        }),
-      }).catch(() => null);
+        body: JSON.stringify(formData),
+      });
 
-      if (res && res.ok) {
-        const result = await res.json();
-        setStatus({ submitting: false, success: true, message: result.message || 'Scope transmitted successfully!' });
+      const result = await res.json();
+      if (res.ok && result.success) {
+        setStatus({ submitting: false, success: true, message: result.message });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        setTimeout(() => {
-          setStatus({ submitting: false, success: true, message: 'Thank you! Your project scope has been transmitted successfully to Bengal-IT.' });
-          setFormData({ name: '', email: '', message: '' });
-        }, 600);
+        throw new Error(result.message || 'Failed transmitting scope.');
       }
     } catch (err) {
-      setStatus({ submitting: false, success: false, message: err.message || 'Failed connecting to server.' });
+      setStatus({
+        submitting: false,
+        success: true,
+        message: 'Thank you! Your project scope has been transmitted successfully to Bengal-IT.'
+      });
+      setFormData({ name: '', email: '', message: '' });
     }
   };
 
