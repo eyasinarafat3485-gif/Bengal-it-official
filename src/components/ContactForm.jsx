@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, MapPin, Mail, Phone, ShieldCheck } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, MapPin, Mail, Phone } from 'lucide-react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -102,19 +102,6 @@ export default function ContactForm() {
                 </div>
               </li>
             </ul>
-
-            {/* NDA Card */}
-            <div className="nda-card">
-              <div className="nda-icon-wrap">
-                <ShieldCheck size={22} />
-              </div>
-              <div>
-                <h4 className="nda-title">NDA Protection</h4>
-                <p className="nda-desc">
-                  We maintain absolute privacy. All preliminary proposals, diagrams, and audits are guarded under strict non-disclosure agreements.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: High-Tech Dark Form Card */}
