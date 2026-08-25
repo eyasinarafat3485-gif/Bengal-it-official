@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 120" width="106" height="120" fill="none">
+  <defs>
+    <!-- Top Ribbon Gradient -->
+    <linearGradient id="b_top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d8ff"/>
+      <stop offset="50%" stop-color="#0062ff"/>
+      <stop offset="100%" stop-color="#002bb8"/>
+    </linearGradient>
+
+    <!-- Bottom Ribbon Gradient -->
+    <linearGradient id="b_bottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0038cb"/>
+      <stop offset="60%" stop-color="#0077ff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+
+    <!-- Left Shaded Facet -->
+    <linearGradient id="b_stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002899"/>
+      <stop offset="100%" stop-color="#00124d"/>
+    </linearGradient>
+
+    <!-- Inner Highlight Cutout -->
+    <linearGradient id="b_inner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d8ff"/>
+      <stop offset="100%" stop-color="#0058ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 3D B Symbol -->
+  <g transform="translate(0, 0)">
+    <!-- 3D Left Polygon Facet -->
+    <path d="M 46 8 L 8 46 L 8 74 L 46 112 L 46 84 L 28 66 L 28 54 L 46 36 Z" fill="url(#b_stem)"/>
+
+    <!-- Inner fold connector -->
+    <path d="M 28 54 L 46 36 L 46 84 L 28 66 Z" fill="url(#b_inner)"/>
+
+    <!-- Top Ribbon Arc -->
+    <path d="M 46 8 C 76 8 98 22 98 42 C 98 58 82 66 54 66 L 38 52 L 52 52 C 72 52 80 46 80 38 C 80 26 66 22 46 22 Z" fill="url(#b_top)"/>
+
+    <!-- Bottom Ribbon Arc -->
+    <path d="M 46 52 C 80 52 98 64 98 82 C 98 100 76 112 46 112 C 26 112 8 102 8 96 L 26 82 C 32 90 40 96 48 96 C 66 96 78 88 78 78 C 78 66 64 60 46 60 Z" fill="url(#b_bottom)"/>
+  </g>
+</svg>
