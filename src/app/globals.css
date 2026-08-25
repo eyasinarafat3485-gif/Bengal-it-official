@@ -2084,12 +2084,12 @@ body {
 }
 
 /* ==========================================
-   HIGH-TECH ENTERPRISE INQUIRY ENGINE FORM
+   HIGH-TECH ENTERPRISE INQUIRY ENGINE FORM (THEME HARMONIZED)
    ========================================== */
 .inquiry-section {
-  padding: 5rem 0;
-  background: radial-gradient(circle at 50% 20%, #0d1527 0%, #060911 100%);
-  color: #ffffff;
+  padding: 5.5rem 0;
+  background: radial-gradient(circle at 85% 35%, rgba(37, 99, 235, 0.08) 0%, transparent 60%), var(--bg-subtle);
+  color: var(--text-dark);
   position: relative;
   overflow: hidden;
 }
@@ -2105,26 +2105,26 @@ body {
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #00e5ff;
+  color: var(--primary-blue);
   padding: 0.35rem 1rem;
   border-radius: 50px;
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.25);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   margin-bottom: 1.25rem;
 }
 
 .inquiry-title {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--text-dark);
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
 }
 
 .inquiry-subtitle {
   font-size: 1rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -2145,13 +2145,13 @@ body {
 .hubs-heading {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-dark);
   letter-spacing: -0.3px;
 }
 
 .hubs-subtext {
   font-size: 0.925rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.55;
   margin-top: -0.5rem;
 }
@@ -2174,9 +2174,9 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.2);
-  color: #00e5ff;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: var(--primary-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2186,62 +2186,23 @@ body {
 .hub-item-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-dark);
 }
 
 .hub-item-detail {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-top: 0.25rem;
   line-height: 1.5;
 }
 
-/* NDA Card */
-.nda-card {
-  margin-top: 1rem;
-  background: rgba(13, 21, 39, 0.7);
-  border: 1px solid rgba(0, 229, 255, 0.18);
-  border-radius: 16px;
-  padding: 1.35rem 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-}
-
-.nda-icon-wrap {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(0, 229, 255, 0.12);
-  color: #00e5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.nda-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.nda-desc {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  margin-top: 0.3rem;
-  line-height: 1.5;
-}
-
-/* Right Column: Dark Form Card */
+/* Right Column: Clean White Form Card */
 .inquiry-form-card {
-  background: #090e1a;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06);
 }
 
 .inquiry-form {
@@ -2264,20 +2225,20 @@ body {
 
 .form-field .form-label {
   font-size: 0.825rem;
-  font-weight: 600;
-  color: #cbd5e1;
+  font-weight: 700;
+  color: var(--text-dark);
 }
 
 .inquiry-input,
 .inquiry-select,
 .inquiry-textarea {
   width: 100%;
-  background: #0d1527;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 0.8rem 1rem;
   font-size: 0.9rem;
-  color: #ffffff;
+  color: var(--text-dark);
   outline: none;
   transition: all 0.25s ease;
   font-family: inherit;
@@ -2285,30 +2246,16 @@ body {
 
 .inquiry-input::placeholder,
 .inquiry-textarea::placeholder {
-  color: #475569;
-}
-
-.inquiry-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
-  padding-right: 2.5rem;
-}
-
-.inquiry-select option {
-  background: #0d1527;
-  color: #ffffff;
-  padding: 0.5rem;
+  color: var(--text-muted);
+  opacity: 0.7;
 }
 
 .inquiry-input:focus,
 .inquiry-select:focus,
 .inquiry-textarea:focus {
-  border-color: #00e5ff;
-  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
-  background: #101a30;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
 }
 
 .inquiry-textarea {
@@ -2322,8 +2269,8 @@ body {
   padding: 1rem 1.5rem;
   border-radius: 12px;
   border: none;
-  background: linear-gradient(90deg, #00e5ff 0%, #00b4d8 50%, #f59e0b 100%);
-  color: #030712;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #00d2ff 100%);
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 1px;
@@ -2334,12 +2281,12 @@ body {
   justify-content: center;
   gap: 0.6rem;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 .transmit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
 }
 
 .transmit-btn:disabled {
@@ -2359,15 +2306,15 @@ body {
 }
 
 .status-alert.success {
-  background: rgba(0, 229, 255, 0.12);
-  border: 1px solid rgba(0, 229, 255, 0.3);
-  color: #00e5ff;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #059669;
 }
 
 .status-alert.error {
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #dc2626;
 }
 
 /* Responsive Breakpoints */
