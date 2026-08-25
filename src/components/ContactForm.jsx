@@ -77,51 +77,60 @@ export default function ContactForm() {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hub-icon-wrap"
-                  title="View on Google Maps"
+                  className="hub-item-card"
+                  title="Open in Google Maps"
                 >
-                  <MapPin size={20} />
+                  <div className="hub-icon-wrap">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <h4 className="hub-item-title">Headquarters</h4>
+                    <p className="hub-item-detail">
+                      Mirpur 11, Dhaka-1213, Bangladesh
+                    </p>
+                  </div>
                 </a>
-                <div>
-                  <h4 className="hub-item-title">Headquarters</h4>
-                  <a
-                    href={mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hub-item-detail map-location-link"
-                  >
-                    Mirpur 11, Dhaka-1213, Bangladesh
-                  </a>
-                </div>
               </li>
 
               <li className="hub-item">
-                <a href="mailto:info@bengalit.com.bd" className="hub-icon-wrap" title="Send Email">
-                  <Mail size={20} />
+                <a
+                  href="mailto:info@bengalit.com.bd"
+                  className="hub-item-card"
+                  title="Send Email Inquiry"
+                >
+                  <div className="hub-icon-wrap">
+                    <Mail size={20} />
+                  </div>
+                  <div>
+                    <h4 className="hub-item-title">General Inquiries</h4>
+                    <p className="hub-item-detail">
+                      info@bengalit.com.bd
+                    </p>
+                  </div>
                 </a>
-                <div>
-                  <h4 className="hub-item-title">General Inquiries</h4>
-                  <a href="mailto:info@bengalit.com.bd" className="hub-item-detail map-location-link">
-                    info@bengalit.com.bd
-                  </a>
-                </div>
               </li>
 
               <li className="hub-item">
-                <a href="tel:01904028006" className="hub-icon-wrap" title="Call Hotline">
-                  <Phone size={20} />
+                <a
+                  href="tel:01904028006"
+                  className="hub-item-card"
+                  title="Call Consultation Hotline"
+                >
+                  <div className="hub-icon-wrap">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <h4 className="hub-item-title">Consultation Hotline</h4>
+                    <p className="hub-item-detail">
+                      01904-028006
+                    </p>
+                  </div>
                 </a>
-                <div>
-                  <h4 className="hub-item-title">Consultation Hotline</h4>
-                  <a href="tel:01904028006" className="hub-item-detail map-location-link">
-                    01904-028006
-                  </a>
-                </div>
               </li>
             </ul>
           </div>
 
-          {/* Right Column: High-Tech Dark Form Card */}
+          {/* Right Column: High-Tech Form Card */}
           <div className="inquiry-form-card">
             {status.success === true && (
               <div className="status-alert success">

@@ -2165,9 +2165,36 @@ body {
 }
 
 .hub-item {
+  width: 100%;
+}
+
+.hub-item-card {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  text-decoration: none !important;
+  color: var(--text-dark);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  cursor: pointer;
+}
+
+.hub-item-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.hub-item-card:hover .hub-icon-wrap {
+  background: var(--primary-blue);
+  color: #ffffff;
+  border-color: var(--primary-blue);
 }
 
 .hub-icon-wrap {
@@ -2181,6 +2208,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
 .hub-item-title {
