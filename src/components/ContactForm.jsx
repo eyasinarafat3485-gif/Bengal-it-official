@@ -78,6 +78,7 @@ export default function ContactForm() {
                   className="hub-item-card"
                   role="button"
                   tabIndex={0}
+                  title="Our Location (Click to view Google Maps)"
                 >
                   <div className="hub-icon-wrap">
                     <MapPin size={20} />
@@ -97,6 +98,7 @@ export default function ContactForm() {
                   className="hub-item-card"
                   role="button"
                   tabIndex={0}
+                  title="Our Official Email (Click to send email)"
                 >
                   <div className="hub-icon-wrap">
                     <Mail size={20} />
@@ -116,6 +118,7 @@ export default function ContactForm() {
                   className="hub-item-card"
                   role="button"
                   tabIndex={0}
+                  title="Our Hotline Number (Click to call)"
                 >
                   <div className="hub-icon-wrap">
                     <Phone size={20} />
