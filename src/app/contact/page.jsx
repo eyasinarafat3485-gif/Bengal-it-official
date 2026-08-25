@@ -1,5 +1,4 @@
 import ContactForm from '../../components/ContactForm';
-import FAQ from '../../components/FAQ';
 
 export const metadata = {
   title: 'Contact Us | Bengal-IT',
@@ -10,7 +9,6 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <ContactForm />
-      <FAQ />
     </div>
   );
 }
