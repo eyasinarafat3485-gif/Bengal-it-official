@@ -59,8 +59,8 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/about-us" className="footer-link">About Us</Link></li>
               <li><Link href="/portfolio" className="footer-link">Portfolio</Link></li>
-              <li><Link href="/#process" className="footer-link">Our Process</Link></li>
-              <li><Link href="/#blog" className="footer-link">Blog</Link></li>
+              {/* <li><Link href="/#process" className="footer-link">Our Process</Link></li> */}
+              {/* <li><Link href="/#blog" className="footer-link">Blog</Link></li> */}
               <li><Link href="/contact" className="footer-link">Contact</Link></li>
             </ul>
           </div>

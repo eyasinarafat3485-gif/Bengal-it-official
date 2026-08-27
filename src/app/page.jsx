@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <Projects />
+      <Projects showViewMore={true} />
       <WhyChooseUs />
       <Process />
       <Clients />
