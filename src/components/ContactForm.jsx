@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle2, AlertCircle, MapPin, Mail, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -65,7 +66,13 @@ export default function ContactForm() {
     <section id="contact" className="inquiry-section">
       <div className="container">
         {/* Top Header */}
-        <div className="inquiry-header text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+          className="inquiry-header text-center"
+        >
           <span className="inquiry-badge">INQUIRY ENGINE</span>
           <h1 className="inquiry-title">
             Initiate Your <span className="highlight-gradient">Transformation</span>
@@ -73,7 +80,7 @@ export default function ContactForm() {
           <p className="inquiry-subtitle">
             Reach out to our software consultants. We typically analyze project scopes and return custom pricing details within 24 business hours.
           </p>
-        </div>
+        </motion.div>
 
         {/* 2-Column Grid */}
         <div className="inquiry-grid">

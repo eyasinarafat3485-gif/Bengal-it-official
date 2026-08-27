@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ExternalLink, Loader2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const fallbackProjects = [
   {
@@ -146,13 +147,18 @@ export default function Projects({ showViewMore = false }) {
   return (
     <section id="portfolio" className="projects-section">
       <div className="container">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={!loading ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          className="text-center"
+        >
           <span className="section-tag">OUR WORK</span>
           <h2 className="section-title">Selected Projects</h2>
           <p className="section-desc">
             Explore some of our recent projects and digital solutions. Hover over any project to preview the full homepage layout.
           </p>
-        </div>
+        </motion.div>
 
         {loading ? (
           <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem 0' }}>

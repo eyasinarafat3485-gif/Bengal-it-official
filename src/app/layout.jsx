@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import SmoothScroll from '../components/SmoothScroll';
 
 export const metadata = {
   title: 'Bengal-IT Official | Enterprise Software & Web Solutions',
@@ -13,13 +14,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="bg-glow-orb-1" />
-        <div className="bg-glow-orb-2" />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <SmoothScroll>
+          <div className="bg-glow-orb-1" />
+          <div className="bg-glow-orb-2" />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </SmoothScroll>
       </body>
     </html>
   );
 }
+

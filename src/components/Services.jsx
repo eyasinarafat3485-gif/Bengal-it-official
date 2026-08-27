@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { Monitor, ShoppingCart, Target, Brush, Settings, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const servicesData = [
   {
@@ -33,13 +36,19 @@ export default function Services() {
   return (
     <section id="services" className="services-section">
       <div className="container">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+          className="text-center"
+        >
           <span className="section-tag">OUR SERVICES</span>
           <h2 className="section-title">Web Solutions That Help Your Business Grow</h2>
           <p className="section-desc">
             We create websites that are not only beautiful but also functional, fast, and built around your business goals.
           </p>
-        </div>
+        </motion.div>
 
         <div className="services-grid">
           {servicesData.map((service, index) => {
