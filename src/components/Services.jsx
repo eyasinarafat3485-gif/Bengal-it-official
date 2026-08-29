@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Monitor, ShoppingCart, Target, Brush, Settings, ArrowRight } from 'lucide-react';
+import { Monitor, ShoppingCart, Target, Brush, Settings, Megaphone, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const servicesData = [
@@ -29,6 +29,11 @@ const servicesData = [
     icon: Settings,
     title: 'Website Maintenance',
     text: 'Ongoing updates, security, backups and technical support to keep your website running smoothly.',
+  },
+  {
+    icon: Megaphone,
+    title: 'Digital Marketing & SEO',
+    text: 'Data-driven marketing strategies, SEO optimization, and social media campaigns to boost your business growth.',
   },
 ];
 

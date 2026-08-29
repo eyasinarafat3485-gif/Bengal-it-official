@@ -22,45 +22,45 @@ const fallbackProjects = [
   },
   {
     _id: '3',
+    title: 'Footcap Fabrics & Footwear Store',
+    category: 'Fabrics & Footwear',
+    imageUrl: '/portfolio/footcap_full_homepage.png',
+    badge: 'Fabrics, Shoes & Sports',
+  },
+  {
+    _id: '4',
     title: 'EduHome Learning Platform',
     category: 'Educational',
     imageUrl: '/portfolio/eduhome_full.png',
     badge: 'Academic & Courses',
   },
   {
-    _id: '4',
+    _id: '5',
     title: 'Homeverse Real Estate Portal',
     category: 'Real Estate',
     imageUrl: '/portfolio/homeverse_realestate_full.png',
     badge: 'Property & Real Estate',
   },
   {
-    _id: '5',
+    _id: '6',
     title: 'Anon Gadgets & Electronics Store',
     category: 'Gadgets & Electronics',
     imageUrl: '/portfolio/anon_full_homepage.png',
     badge: 'Gadgets & Smart Devices',
   },
   {
-    _id: '6',
+    _id: '7',
     title: 'Foodie Restaurant & Dining',
     category: 'Restaurant',
     imageUrl: '/portfolio/foodie_restaurant_full.png',
     badge: 'Fine Dining & Food',
   },
   {
-    _id: '7',
+    _id: '8',
     title: 'EasyBank Digital Banking',
     category: 'Digital Banking',
     imageUrl: '/portfolio/easybank_full.png',
     badge: 'Fintech & Banking',
-  },
-  {
-    _id: '8',
-    title: 'Footcap Fabrics & Footwear Store',
-    category: 'Fabrics & Footwear',
-    imageUrl: '/portfolio/footcap_full_homepage.png',
-    badge: 'Fabrics, Shoes & Sports',
   },
   {
     _id: '9',
@@ -111,16 +111,9 @@ const fallbackProjects = [
     imageUrl: '/portfolio/transportio_full.png',
     badge: 'Logistics & Cargo',
   },
-  {
-    _id: '16',
-    title: 'Filmlane Cinema & Streaming',
-    category: 'Entertainment',
-    imageUrl: '/portfolio/filmlane_full.png',
-    badge: 'Movies & Streaming',
-  },
 ];
 
-export default function Projects({ showViewMore = false }) {
+export default function Projects({ showViewMore = false, limit }) {
   const [projects, setProjects] = useState(fallbackProjects);
   const [loading, setLoading] = useState(true);
 
@@ -144,6 +137,8 @@ export default function Projects({ showViewMore = false }) {
     fetchProjects();
   }, []);
 
+  const displayedProjects = limit ? projects.slice(0, limit) : projects;
+
   return (
     <section id="portfolio" className="projects-section">
       <div className="container">
@@ -166,7 +161,7 @@ export default function Projects({ showViewMore = false }) {
           </div>
         ) : (
           <div className="projects-grid">
-            {projects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <div key={project._id || index} className="project-card">
                 <div className="project-img-holder">
                   <div className="project-badge-overlay">

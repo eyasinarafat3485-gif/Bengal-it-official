@@ -8,8 +8,7 @@ export default function Hero() {
         {/* Left Column Text */}
         <div className="hero-content-left">
           <h1 className="hero-h1">
-            Build a Website <br />
-            That Moves Your <br />
+            Build a Website That Moves Your <br />
             <span className="highlight">Business Forward</span>
           </h1>
 

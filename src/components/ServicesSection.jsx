@@ -39,21 +39,22 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section id="services" style={{ padding: '4rem 0' }}>
+    <section id="services" className="services-section">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={!loading ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          style={{ textBaseline: 'middle', marginBottom: '3rem', textAlign: 'center' }}
+          className="text-center"
+          style={{ marginBottom: '2.5rem' }}
         >
-          <span style={{ color: 'var(--accent-cyan)', fontWeight: 600, fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
+          <span className="section-tag">
             What We Deliver
           </span>
-          <h2 style={{ fontSize: '2.4rem', fontWeight: 800, marginTop: '0.4rem' }}>
+          <h2 className="section-title">
             Enterprise Solutions & Tech Capabilities
           </h2>
-          <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0.5rem auto 0' }}>
+          <p className="section-desc">
             Powering business transformation with modern architecture, API services, and high-performance applications.
           </p>
         </motion.div>
