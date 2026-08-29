@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 
 const fallbackProjects = [
   {
-    _id: '1',
-    title: 'Solutry IT Agency & Software',
-    category: 'IT Agency',
-    imageUrl: '/portfolio/solutry_it_agency_full.png',
-    badge: 'IT & Software Agency',
+    _id: '3',
+    title: 'Footcap Fabrics & Footwear Store',
+    category: 'Fabrics & Footwear',
+    imageUrl: '/portfolio/footcap_full_homepage.png',
+    badge: 'Fabrics, Shoes & Sports',
   },
   {
     _id: '2',
@@ -21,11 +21,11 @@ const fallbackProjects = [
     badge: 'Themes, Plugins & Resources',
   },
   {
-    _id: '3',
-    title: 'Footcap Fabrics & Footwear Store',
-    category: 'Fabrics & Footwear',
-    imageUrl: '/portfolio/footcap_full_homepage.png',
-    badge: 'Fabrics, Shoes & Sports',
+    _id: '1',
+    title: 'Solutry IT Agency & Software',
+    category: 'IT Agency',
+    imageUrl: '/portfolio/solutry_it_agency_full.png',
+    badge: 'IT & Software Agency',
   },
   {
     _id: '4',
