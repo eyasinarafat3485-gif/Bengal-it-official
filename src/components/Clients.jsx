@@ -9,6 +9,8 @@ const clients = [
   { name: 'ShopEasy', icon: ShoppingBag },
 ];
 
+const marqueeList = [...clients, ...clients, ...clients, ...clients];
+
 export default function Clients() {
   return (
     <section className="clients-section">
@@ -21,16 +23,18 @@ export default function Clients() {
           </p>
         </div>
 
-        <div className="clients-bar">
-          {clients.map((client, index) => {
-            const Icon = client.icon;
-            return (
-              <div key={index} className="client-logo">
-                <Icon size={24} />
-                <span>{client.name}</span>
-              </div>
-            );
-          })}
+        <div className="clients-marquee-container">
+          <div className="clients-marquee-track">
+            {marqueeList.map((client, index) => {
+              const Icon = client.icon;
+              return (
+                <div key={index} className="client-logo">
+                  <Icon size={24} />
+                  <span>{client.name}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

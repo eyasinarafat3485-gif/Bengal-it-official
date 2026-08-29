@@ -861,30 +861,55 @@ html.lenis body {
   background-color: #ffffff;
 }
 
-.clients-bar {
+.clients-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2.5rem;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-marquee-track {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 3rem;
-  opacity: 0.7;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marqueeScroll 22s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee-container:hover .clients-marquee-track {
+  animation-play-state: paused;
 }
 
 .client-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   filter: grayscale(100%);
-  transition: filter 0.2s;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  opacity: 0.85;
 }
 
 .client-logo:hover {
   filter: grayscale(0%);
-  color: var(--text-dark);
+  color: var(--primary-blue);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* CTA Banner */
@@ -921,10 +946,43 @@ html.lenis body {
   color: var(--text-body);
 }
 
+.cta-right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .cta-actions {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.cta-graphic-box {
+  display: flex;
+  gap: 0.5rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.cta-icon-pill {
+  padding: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-icon-pill.light {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.cta-icon-pill.blue {
+  background: #2563eb;
+  color: #ffffff;
 }
 
 /* Footer */
@@ -1019,14 +1077,14 @@ html.lenis body {
   color: #ffffff;
   font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.45rem;
 }
 
 .footer-link {
@@ -1491,6 +1549,93 @@ html.lenis body {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .cta-content {
+    max-width: 100%;
+  }
+
+  .cta-right-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .cta-actions {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .cta-actions .btn-blue,
+  .cta-actions .btn-outline {
+    flex: 1;
+    justify-content: center;
+    padding: 0.75rem 0.4rem;
+    font-size: 0.825rem;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .cta-graphic-box {
+    margin: 0 auto;
+  }
+
+  /* Compact Timeline for Mobile */
+  .workflow-timeline-wrapper {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .timeline-vertical-line {
+    left: 23px;
+    top: 22px;
+    bottom: 22px;
+    width: 2px;
+  }
+
+  .timeline-step-row {
+    gap: 0.75rem;
+  }
+
+  .timeline-node-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    gap: 0.1rem;
+  }
+
+  .node-icon-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+  }
+
+  .node-icon-circle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .node-step-label {
+    font-size: 0.5rem;
+    letter-spacing: 0;
+  }
+
+  .timeline-content-card {
+    padding: 0.75rem 0.9rem;
+    border-radius: 12px;
+  }
+
+  .timeline-step-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-step-desc {
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .footer-grid {
@@ -1587,6 +1732,73 @@ html.lenis body {
 
   .services-grid .service-link {
     font-size: 0.78rem;
+  }
+
+  .cta-actions {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.4rem;
+  }
+
+  .cta-actions .btn-blue,
+  .cta-actions .btn-outline {
+    flex: 1;
+    justify-content: center;
+    padding: 0.7rem 0.35rem;
+    font-size: 0.78rem;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .workflow-timeline-wrapper {
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .timeline-vertical-line {
+    left: 21px;
+    top: 18px;
+    bottom: 18px;
+  }
+
+  .timeline-step-row {
+    gap: 0.5rem;
+  }
+
+  .timeline-node-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .node-icon-circle {
+    width: 23px;
+    height: 23px;
+    border-radius: 5px;
+  }
+
+  .node-icon-circle svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .node-step-label {
+    font-size: 0.46rem;
+  }
+
+  .timeline-content-card {
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+  }
+
+  .timeline-step-title {
+    font-size: 0.88rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .timeline-step-desc {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 
   .logo-tagline {

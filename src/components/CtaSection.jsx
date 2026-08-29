@@ -14,7 +14,7 @@ export default function CtaSection() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          <div className="cta-right-group">
             <div className="cta-actions">
               <Link href="/contact" className="btn-blue">
                 Start a Conversation <ArrowRight size={16} />
@@ -25,12 +25,12 @@ export default function CtaSection() {
             </div>
 
             {/* Floating Message Graphics */}
-            <div style={{ display: 'flex', gap: '0.5rem', background: '#ffffff', padding: '1.2rem', borderRadius: '16px', boxShadow: '0 10px 25px rgba(37,99,235,0.1)' }}>
-              <div style={{ background: '#eff6ff', padding: '0.8rem', borderRadius: '12px', color: '#2563eb' }}>
-                <Mail size={32} />
+            <div className="cta-graphic-box">
+              <div className="cta-icon-pill light">
+                <Mail size={24} />
               </div>
-              <div style={{ background: '#2563eb', padding: '0.8rem', borderRadius: '12px', color: '#ffffff' }}>
-                <MessageCircle size={32} />
+              <div className="cta-icon-pill blue">
+                <MessageCircle size={24} />
               </div>
             </div>
           </div>
