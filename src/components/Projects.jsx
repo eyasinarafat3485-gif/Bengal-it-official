@@ -113,7 +113,7 @@ const fallbackProjects = [
   },
 ];
 
-export default function Projects({ showViewMore = false, limit }) {
+export default function Projects({ showViewMore = false, limit, isHomePage = false }) {
   const [projects, setProjects] = useState(fallbackProjects);
   const [loading, setLoading] = useState(true);
 
@@ -140,7 +140,7 @@ export default function Projects({ showViewMore = false, limit }) {
   const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section id="portfolio" className="projects-section">
+    <section id="portfolio" className={`projects-section ${isHomePage ? 'home-projects-section' : ''}`}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

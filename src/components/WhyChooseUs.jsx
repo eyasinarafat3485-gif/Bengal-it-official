@@ -1,4 +1,7 @@
+'use client';
+
 import { Users, Smartphone, Rocket, Headphones } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const whyItems = [
   {
@@ -27,25 +30,38 @@ export default function WhyChooseUs() {
   return (
     <section className="why-section">
       <div className="container">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center"
+        >
           <span className="section-tag">WHY CHOOSE BENGALIIT</span>
           <h2 className="section-title">A Practical Approach to Web Development</h2>
           <p className="section-desc">
             We focus on delivering websites that are reliable, user-friendly, and built to support your business.
           </p>
-        </div>
+        </motion.div>
 
         <div className="why-grid">
           {whyItems.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div key={index} className="why-item">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="why-item-card"
+              >
                 <div className="why-icon-circle">
                   <Icon size={24} />
                 </div>
                 <h3 className="why-title">{item.title}</h3>
                 <p className="why-desc">{item.desc}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

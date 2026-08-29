@@ -22,10 +22,10 @@ export default function Hero() {
 
           <div className="hero-cta-group">
             <Link href="/contact" className="btn-blue-hero">
-              Start Your Project <span className="arrow-circle"><ArrowRight size={14} /></span>
+              Get Started <span className="arrow-circle"><ArrowRight size={14} /></span>
             </Link>
             <Link href="/portfolio" className="btn-light-hero">
-              View Our Work <ArrowUpRight size={16} />
+              Our Work <ArrowUpRight size={16} />
             </Link>
           </div>
 

@@ -532,10 +532,12 @@ html.lenis body {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1.35rem 1.25rem;
+  padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   transition: all 0.3s ease;
 }
 
@@ -545,9 +547,23 @@ html.lenis body {
   transform: translateY(-3px);
 }
 
+.service-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.service-card-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .service-icon-box {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   border: 1.5px solid var(--primary-blue-border);
   background-color: var(--primary-blue-light);
@@ -555,7 +571,7 @@ html.lenis body {
   align-items: center;
   justify-content: center;
   color: var(--primary-blue);
-  margin-bottom: 0.85rem;
+  margin: 0 auto 0.85rem auto;
 }
 
 .service-title {
@@ -564,6 +580,7 @@ html.lenis body {
   color: var(--text-dark);
   margin-bottom: 0.45rem;
   line-height: 1.3;
+  text-align: center;
 }
 
 .service-text {
@@ -571,6 +588,7 @@ html.lenis body {
   color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 0.9rem;
+  text-align: center;
 }
 
 .service-link {
@@ -580,8 +598,10 @@ html.lenis body {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.3rem;
   transition: gap 0.2s ease;
+  margin: 0 auto;
 }
 
 .service-link:hover {
@@ -707,36 +727,65 @@ html.lenis body {
   text-align: center;
 }
 
-.why-item {
+.why-item-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.85rem 1.35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  height: 100%;
+}
+
+.why-item-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-blue-border);
+  box-shadow: 0 14px 35px -5px rgba(37, 99, 235, 0.14);
 }
 
 .why-icon-circle {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background-color: var(--primary-blue-light);
-  border: 1px solid var(--primary-blue-border);
+  border: 1.5px solid var(--primary-blue-border);
   color: var(--primary-blue);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.2rem;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.why-item-card:hover .why-icon-circle {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border-color: var(--primary-blue);
+  transform: scale(1.12) rotate(6deg);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.35);
 }
 
 .why-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
+  transition: color 0.25s ease;
+}
+
+.why-item-card:hover .why-title {
+  color: var(--primary-blue);
 }
 
 .why-desc {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Process Section */
@@ -1571,6 +1620,10 @@ html.lenis body {
     grid-template-columns: 1fr !important;
   }
 
+  .home-projects-section .projects-grid .project-card:nth-child(n+2) {
+    display: none !important;
+  }
+
   .process-line {
     display: none;
   }
@@ -1608,8 +1661,9 @@ html.lenis body {
   .cta-actions .btn-outline {
     flex: 1;
     justify-content: center;
-    padding: 0.75rem 0.4rem;
-    font-size: 0.825rem;
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
     white-space: nowrap;
     text-align: center;
   }
@@ -1731,10 +1785,9 @@ html.lenis body {
   .btn-blue-hero,
   .btn-light-hero {
     flex: 1;
-    width: auto;
     justify-content: center;
-    padding: 0.75rem 0.5rem;
-    font-size: 0.825rem;
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
     gap: 0.4rem;
     white-space: nowrap;
   }
@@ -1762,12 +1815,14 @@ html.lenis body {
 
   .services-grid .service-card {
     padding: 1rem 0.8rem;
+    align-items: center;
+    text-align: center;
   }
 
   .services-grid .service-icon-box {
     width: 34px;
     height: 34px;
-    margin-bottom: 0.6rem;
+    margin: 0 auto 0.6rem auto;
   }
 
   .services-grid .service-title {
@@ -1814,17 +1869,18 @@ html.lenis body {
   .cta-actions {
     flex-direction: row;
     width: 100%;
-    gap: 0.4rem;
+    gap: 0.5rem;
   }
 
   .cta-actions .btn-blue,
   .cta-actions .btn-outline {
     flex: 1;
     justify-content: center;
-    padding: 0.7rem 0.35rem;
-    font-size: 0.78rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.825rem;
     gap: 0.35rem;
     white-space: nowrap;
+    text-align: center;
   }
 
   .workflow-timeline-wrapper {
@@ -2280,6 +2336,13 @@ html.lenis body {
   .faq-answer-content {
     padding: 0.6rem 1.1rem 1rem 1.1rem;
     font-size: 0.88rem;
+  }
+
+  .faq-footer-prompt {
+    padding: 0.85rem 0.85rem;
+    font-size: 0.81rem;
+    line-height: 1.45;
+    margin-top: 1.5rem;
   }
 }
 

@@ -73,6 +73,10 @@ export default function Footer() {
               <a href="tel:+8801904028006" className="footer-contact-link">+88 01904-028006</a>
             </div>
             <div className="footer-contact-item">
+              <Mail size={16} style={{ color: '#2563eb', flexShrink: 0 }} />
+              <a href={mailUrl} className="footer-contact-link">info@bengalit.com.bd</a>
+            </div>
+            <div className="footer-contact-item">
               <MapPin size={16} style={{ color: '#2563eb', flexShrink: 0 }} />
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Mirpur+11,+Dhaka-1213,+Bangladesh"

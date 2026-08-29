@@ -17,10 +17,10 @@ export default function CtaSection() {
           <div className="cta-right-group">
             <div className="cta-actions">
               <Link href="/contact" className="btn-blue">
-                Start a Conversation <ArrowRight size={16} />
+                Get Started <ArrowRight size={16} />
               </Link>
               <Link href="/services" className="btn-outline">
-                Explore Our Services <ArrowUpRight size={16} />
+                Our Services <ArrowUpRight size={16} />
               </Link>
             </div>
 

@@ -59,8 +59,8 @@ export default function Services() {
           {servicesData.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="service-card">
-                <div>
+              <div key={index} className="service-card text-center">
+                <div className="service-card-content">
                   <div className="service-icon-box">
                     <Icon size={22} />
                   </div>
@@ -68,7 +68,7 @@ export default function Services() {
                   <p className="service-text">{service.text}</p>
                 </div>
 
-                <div>
+                <div className="service-card-action">
                   <Link href="/contact" className="service-link">
                     Learn More <ArrowRight size={14} />
                   </Link>
