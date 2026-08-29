@@ -701,9 +701,9 @@ html.lenis body {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-  margin-top: 3.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem 1.5rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -1560,9 +1560,13 @@ html.lenis body {
     gap: 0.85rem;
   }
 
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 0.85rem;
+  }
+
   .grid-3,
   .projects-grid,
-  .why-grid,
   .process-stepper {
     grid-template-columns: 1fr !important;
   }
@@ -1783,6 +1787,28 @@ html.lenis body {
 
   .cta-title {
     font-size: 1.25rem;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 0.65rem;
+    margin-top: 2rem;
+  }
+
+  .why-icon-circle {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.75rem;
+  }
+
+  .why-title {
+    font-size: 0.925rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .why-desc {
+    font-size: 0.78rem;
+    line-height: 1.4;
   }
 
   .cta-actions {

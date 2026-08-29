@@ -1,4 +1,4 @@
-import { Users, Smartphone, Rocket, MessageSquare, Headphones } from 'lucide-react';
+import { Users, Smartphone, Rocket, Headphones } from 'lucide-react';
 
 const whyItems = [
   {
@@ -15,11 +15,6 @@ const whyItems = [
     icon: Rocket,
     title: 'Performance Matters',
     desc: 'We build clean, optimized websites that load fast and perform well.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Clear Communication',
-    desc: 'We keep the process simple and keep you updated at every step.',
   },
   {
     icon: Headphones,
