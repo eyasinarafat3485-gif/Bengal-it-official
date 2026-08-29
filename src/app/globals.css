@@ -1502,6 +1502,26 @@ html.lenis body {
     font-size: 1.35rem;
   }
 
+  .stats-card-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .chart-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1rem 0.5rem;
+  }
+
+  .chart-legend {
+    gap: 0.6rem 1rem;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+  }
+
   .hero-subtext {
     font-size: 0.95rem;
   }
@@ -1707,6 +1727,22 @@ html.lenis body {
   .services-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.65rem;
+  }
+
+  .chart-box {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .chart-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  .legend-label {
+    font-size: 0.725rem !important;
   }
 
   .services-grid .service-card {
